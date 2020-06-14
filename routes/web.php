@@ -20,12 +20,12 @@ Route::get('/', function () {
 
 
 Route::get('/dashboard', function(){
-    return view('admin.dashboard');
+    return view('dashboard.dashboard');
 });
 
 Route::group(['prefix'=>'table'],function(){
 
     Route::get('/employee', function(){
-        return view('admin.testtable');
+        return view('dashboard.testtable');
     })->name('employee');
 });
