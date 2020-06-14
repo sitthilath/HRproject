@@ -26,6 +26,6 @@ Route::get('/dashboard', function(){
 Route::group(['prefix'=>'table'],function(){
 
     Route::get('/employee', function(){
-        return view('dashboard.testtable');
+        return view('dashboard.table.tb_employee');
     })->name('employee');
 });
