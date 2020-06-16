@@ -23,9 +23,16 @@ Route::get('/dashboard', function(){
     return view('dashboard.dashboard');
 });
 
-Route::group(['prefix'=>'table'],function(){
 
-    Route::get('/employee', function(){
-        return view('dashboard.table.tb_employee');
-    })->name('employee');
-});
+//crud employee
+    Route::get('/employee','EmployeeController@index')->name('employee');
+    Route::post('/form.insert','EmployeeController@store');
+    Route::get('/insert',function(){
+        return view('dashboard.table.crudemployee.insert');
+    })->name('insert');
+    Route::delete('/form.del/{id}','EmployeeController@destroy');
+    Route::get('/form.edit/{id}','EmployeeController@edit');
+    Route::put('/form.update/{id}','EmployeeController@update');
+//end crud employee
+
+

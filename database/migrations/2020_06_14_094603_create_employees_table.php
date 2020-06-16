@@ -19,10 +19,14 @@ class CreateEmployeesTable extends Migration
             $table->string('surname');
             $table->string('gender');
             $table->date('date_of_birth');
-            $table->longtext('old_address');
-            $table->longtext('current_address');
+            $table->string('past_village');
+            $table->string('past_city');
+            $table->string('past_province');
+            $table->string('current_village');
+            $table->string('currnt_city');
+            $table->string('current_province');
             $table->string('tel');
-            $table->string('position');
+           
             $table->timestamps();
         });
     }

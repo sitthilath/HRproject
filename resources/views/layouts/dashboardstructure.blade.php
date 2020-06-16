@@ -8,17 +8,25 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>@yield('title')</title>
   <!-- General CSS Files -->
-  <link rel="stylesheet" href="../assets/css/app.min.css">
+  <link rel="stylesheet" href="{{asset('../assets/css/app.min.css')}}">
+  <link rel="stylesheet" href="{{asset('../assets/bundles/bootstrap-daterangepicker/daterangepicker.css')}}">
+  <link rel="stylesheet" href="{{asset('../assets/bundles/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css')}}">
+  <link rel="stylesheet" href="{{asset('../assets/bundles/select2/dist/css/select2.min.css')}}">
+  <link rel="stylesheet" href="{{asset('../assets/bundles/jquery-selectric/selectric.css')}}">
+  <link rel="stylesheet" href="{{asset('../assets/bundles/bootstrap-timepicker/css/bootstrap-timepicker.min.css')}}">
+  <link rel="stylesheet" href="{{asset('../assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.css')}}">
   <!-- Template CSS -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="{{asset('../assets/css/style.css')}}">
+  <link rel="stylesheet" href="{{asset('../assets/css/components.css')}}">
 
-  <link rel="stylesheet" href="../assets/bundles/datatables/datatables.min.css">
-   <link rel="stylesheet" href="../assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="{{asset('../assets/bundles/datatables/datatables.min.css')}}">
+   <link rel="stylesheet" href="{{asset('../assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css')}}">
 
   <!-- Custom style CSS -->
-  <link rel="stylesheet" href="../assets/css/custom.css">
-  <link rel='shortcut icon' type='image/x-icon' href='../assets/img/favicon.ico' />
+  <link rel="stylesheet" href="{{asset('../assets/css/custom.css')}}">
+  <link rel='shortcut icon' type='image/x-icon' href='{{asset('../assets/img/favicon.ico0')}}' />
+
+
 </head>
 
 <body>
@@ -275,10 +283,10 @@
                 <li><a class="nav-link" href="form-wizard.html">Form Wizard</a></li>
               </ul>
             </li> -->
-            <li class="dropdown {{Request::is('table/*')? 'active' : null}}">
+            <li class="dropdown {{Request::is('employee')? 'active' : null}}">
               <a href="#" class="menu-toggle nav-link has-dropdown "><i data-feather="grid"></i><span>Tables</span></a>
               <ul class="dropdown-menu ">
-                <li class="{{Request::is('table/employee')? 'active' : null}}">
+                <li class="{{Request::is('employee')? 'active' : null}}">
                     <a class="nav-link " href="{{ route('employee') }}">Employee</a>
                 </li>
                  <!-- <li><a class="nav-link" href="advance-table.html">Advanced Table</a></li>
@@ -519,9 +527,19 @@
   <script src="../assets/bundles/datatables/datatables.min.js"></script>
  <script src="../assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
  <script src="../assets/bundles/jquery-ui/jquery-ui.min.js"></script>
+ <script src="../assets/bundles/cleave-js/dist/cleave.min.js"></script>
+  <script src="../assets/bundles/cleave-js/dist/addons/cleave-phone.us.js"></script>
+  <script src="../assets/bundles/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+  <script src="../assets/bundles/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="../assets/bundles/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+  <script src="../assets/bundles/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+  <script src="../assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <script src="../assets/bundles/select2/dist/js/select2.full.min.js"></script>
+  <script src="../assets/bundles/jquery-selectric/jquery.selectric.min.js"></script>
   <!-- Page Specific JS File -->
   <script src="../assets/js/page/index.js"></script>
   <script src="../assets/js/page/datatables.js"></script>
+  <script src="../assets/js/page/forms-advanced-forms.js"></script>
   <!-- Template JS File -->
   <script src="../assets/js/scripts.js"></script>
   <!-- Custom JS File -->
@@ -531,5 +549,6 @@
 </body>
 
 
-<!-- index.html  21 Nov 2019 03:47:04 GMT -->
+
 </html>
+
