@@ -84,13 +84,13 @@
                                 Action
                               </a>
                               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="width:10%">
-                                <a class="dropdown-item btn btn-warning" href="{{url('form.edit/'.$emps->id)}}" onclick="return confirm('ທ້ານຕ້ອງການແກ້ໄຂຂໍ້ມູນນີ້ແທ້ບໍ?')" ><center><i class="far fa-edit mr-1"></i>Edit</center></a>
+                                <a class="dropdown-item btn-warning" href="{{url('form.edit/'.$emps->id)}}" onclick="return confirm('ທ້ານຕ້ອງການແກ້ໄຂຂໍ້ມູນນີ້ແທ້ບໍ?')" ><i class="far fa-edit mr-1"></i>Edit</a>
                                 
                                 <form action="{{url('form.del/'.$emps->id)}}" method="post">
                                               {{method_field('DELETE')}}
                                                       {{csrf_field()}}
                                                       
-                              <button type="submit" class="dropdown-item btn btn-danger" onclick="return confirm('ທ້ານຕ້ອງການລົບຂໍ້ມູນນີ້ແທ້ບໍ?')" ><center><i class="far fa-trash-alt mr-1" ></i>Delete</center></button>
+                              <button type="submit" class="dropdown-item btn-danger" onclick="return confirm('ທ້ານຕ້ອງການລົບຂໍ້ມູນນີ້ແທ້ບໍ?')" ><i class="far fa-trash-alt mr-1" ></i>Delete</button>
 
                                 </form>
                               </div>
