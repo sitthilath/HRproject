@@ -23,7 +23,7 @@ class CreateEmployeesTable extends Migration
             $table->string('past_city');
             $table->string('past_province');
             $table->string('current_village');
-            $table->string('currnt_city');
+            $table->string('current_city');
             $table->string('current_province');
             $table->string('tel');
            
